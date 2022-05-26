@@ -27,8 +27,8 @@
                             <input 
                                 type="text" 
                                 class="form-control" 
-                                name="id" 
-                                placeholder="id"
+                                name="cpf" 
+                                placeholder="cpf"
                             />
                             <label for="cpf">CPF:</label>
                         </div>
@@ -53,8 +53,8 @@
                             <input 
                                 type="text" 
                                 class="form-control" 
-                                name="sigla" 
-                                placeholder="Sigla"
+                                name="endereco" 
+                                placeholder="endereco"
                             />
                             <label for="endereco">endereço:</label>
                         </div>
@@ -64,12 +64,10 @@
                     <div class="col" >
                         <div class="form-floating mb-3">
                             <input 
-                                type="number"
-                                min="1" 
-                                max="5" 
+                                type="text"
                                 class="form-control" 
-                                name="tempo" 
-                                placeholder="Tempo"
+                                name="telefone" 
+                                placeholder="telefone"
                             />
                             <label for="telefone">Telefone:</label>
                         </div>

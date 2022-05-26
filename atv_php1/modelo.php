@@ -8,11 +8,11 @@
         if($fp) {
             while(!feof($fp)) {
 				$arr = array();
-                $id = fgets($fp);
+                $cpf = fgets($fp);
 				$dados = fgets($fp);
 				if(!empty($dados)) {
 					$arr = explode("#", $dados);
-					$pessoas[$id] = $arr;
+					$pessoas[$cpf] = $arr;
 				}
 			}
 			fclose($fp);
@@ -21,13 +21,13 @@
 		return $pessoas;
 	}
 
-	function select_where($id) {
+	function select_where($cpf) {
 
 		$pessoas = select();
 
 		foreach ($pessoas as $chave => $dados) {
 			// echo "$cpf=$chave<br>";
-			if(strcmp($id, trim($chave)) == 0) { 
+			if(strcmp($cpf, trim($chave)) == 0) { 
 				return $dados;
 			}
 		}
@@ -40,9 +40,9 @@
 		$fp = fopen('pessoas.txt', 'a+');
 
 		if ($fp) {
-			foreach($pessoas as $id => $dados) {
+			foreach($pessoas as $cpf => $dados) {
 				if(!empty($dados)) {
-					fputs($fp, $id);
+					fputs($fp, $cpf);
 					fputs($fp, "\n");
 					$linha=$dados['nome']."#".$dados['endereco']."#".$dados['telefone'];
 					fputs($fp, $linha);
@@ -54,18 +54,18 @@
 		}
 	}
 
-	function update($new, $id) {
+	function update($new, $cpf) {
 
-		$cursos = select();
+		$pessoas = select();
 
 		$fp = fopen('pessoas.txt', 'a+');
 
 		if ($fp) {
-			foreach($cursos as $chave => $dados) {
+			foreach($pessoas as $chave => $dados) {
 				if(!empty($dados)) {
 					fputs($fp, $chave);
-					if($id == trim($chave)){
-						foreach($new as $new_id => $new_dados) {
+					if($cpf == trim($chave)){
+						foreach($new as $new_cpf => $new_dados) {
 							if(!empty($new_dados)) {
 								$linha=$new_dados['nome']."#".$new_dados['endereco']."#".$new_dados['telefone']."\n";
 							}
