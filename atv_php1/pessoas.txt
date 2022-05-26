@@ -1,0 +1,12 @@
+000.000.001
+Gil Eduardo de Andrade#Rua das Oliveiras,2012#(41)3423-5678
+000.000.002
+Denise Camargo Correa#Av. José Lobo,905#(41)3423-5674
+000.000.003
+Carlos Eduardo Ferla#Rua Xavier da Silva,134#(41)3423-5612
+000.000.004
+Maria Eduarda da Silva#Rua Professor Coelho,541#(41)3423-5663
+000.000.005
+Luana Rodrigues Alves#Rua Maneco Viana,41#(41)3423-5694
+000.000.006
+Douglas Arcanjo Silveira#Rua Rodrigues Alves,903#(41)3423-5699
